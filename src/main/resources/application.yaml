@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: demo
+
+  ai:
+    mcp:
+      server:
+        type: SYNC
+        name: inventory-mcp-server
+        version: 1.0.0
+
+inventory:
+  base-url: "https://xyzMart.api.com"
