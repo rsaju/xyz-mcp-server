@@ -9,5 +9,20 @@ spring:
         name: inventory-mcp-server
         version: 1.0.0
 
+  security:
+    oauth2:
+      client:
+        registration:
+          inventory-service-client:
+            provider: my-auth-server
+            client-id: "your-client-id"
+            client-secret: "your-client-secret"
+            authorization-grant-type: client_credentials
+            scope: "read,write"
+        provider:
+          my-auth-server:
+            token-uri: "https://example.com"
+
 inventory:
   base-url: "https://xyzMart.api.com"
+
